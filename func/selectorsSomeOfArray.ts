@@ -23,3 +23,13 @@ export const someOfArrayOfNumbers: someOfArrayOfNumbersFuncI = (
     selectedValues.some((selectedValue) => selectedValue === select)
   );
 };
+
+interface someOfArrayFuncI {
+  (selectedValues: any[] | [], selectors: any[]): boolean;
+}
+export const someOfArray: someOfArrayFuncI = (selectedValues, selectors) => {
+  if (selectedValues.length === 0) return false;
+  return selectors.some((select) =>
+    selectedValues.some((selectedValue) => selectedValue === select)
+  );
+};

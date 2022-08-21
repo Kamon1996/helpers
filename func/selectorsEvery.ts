@@ -23,3 +23,16 @@ export const everyNumberComparing: everyNumberComparingFuncI = (
     selectedValues.some((selectedValue) => selectedValue === select)
   );
 };
+
+interface everyComparingFuncI {
+  (selectedValues: any[] | [], selectors: any[]): boolean;
+}
+export const everyComparing: everyComparingFuncI = (
+  selectedValues,
+  selectors
+) => {
+  if (selectedValues.length === 0) return false;
+  return selectors.every((select) =>
+    selectedValues.some((selectedValue) => selectedValue === select)
+  );
+};

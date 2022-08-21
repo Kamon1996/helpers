@@ -13,3 +13,13 @@ export const selectorsSomeComparingNumbers: selectorsSomeComparingNumberFuncI =
   (selectedValue, selectors) => {
     return selectors.some((select) => selectedValue === select);
   };
+
+interface selectorsSomeComparFuncI {
+  (selectedValue: any, selectors: any[]): boolean;
+}
+export const selectorsSomeCompar: selectorsSomeComparFuncI = (
+  selectedValue,
+  selectors
+) => {
+  return selectors.some((select) => selectedValue === select);
+};

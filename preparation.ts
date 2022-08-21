@@ -21,17 +21,6 @@ export const filtrationPreparation = (filters: filters) => {
   return removeEmptyFilters(filters);
 };
 
-const filters: filters = {
-  status: {
-    type: "range",
-    value: [10, 200],
-  },
-  isActive: {
-    type: "strong",
-    value: true,
-  },
-};
-
 const removeEmptyFilters = (filters: filters) => {
   Object.keys(filters).forEach((key) => {
     if (isValueEmpty(filters[key].value)) delete filters[key];

@@ -18,3 +18,10 @@ interface isStringInRangeFuncI {
 export const isStringInRange: isStringInRangeFuncI = (value, [start, end]) => {
   return start <= value && value <= end;
 };
+
+interface isInRangeFuncI {
+  (elem: any, range: [any, any]): boolean;
+}
+export const isInRange: isInRangeFuncI = (value, [start, end]) => {
+  return start <= value && value <= end;
+};
